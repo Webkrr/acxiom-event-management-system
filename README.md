@@ -6,7 +6,7 @@ It provides dedicated dashboards for **Admins**, **Vendors**, and **Users**, ena
 ---
 
 ## 📁 Project Structure 
-
+```
 event-management/
 │
 ├── index.html
@@ -47,7 +47,7 @@ event-management/
 ├── css/
 ├── js/
 └── images/
-
+```
 
 ---
 
