@@ -95,7 +95,7 @@ git clone https://github.com/Webkrr/acxiom-event-management-system.git
 ```bash
 cd acxiom-event-management-system
 ```
-3️⃣ Open in Browser
+### 3️⃣ Open in Browser
 Simply open the index.html file in your browser.
 
 🧠 How It Works
