@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maintain Users</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Maintain Users</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button class="btn" onclick="userSignup('name','email','password')">Add User</button>
+  </div>
+  <div class="card">
+    <h3>Existing Users</h3>
+    <table id="userTable"></table>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+  <script>
+    (function loadUsers(){
+      const tbl=document.getElementById('userTable'); tbl.innerHTML='';
+      (users||[]).filter(u=>u.role==='user').forEach(u=>{ tbl.innerHTML += `<tr><td>${u.name}</td><td>${u.email}</td></tr>`; });
+    })();
+  </script>
+
+</div>
+</body>
+</html>

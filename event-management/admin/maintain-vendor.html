@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Maintain Vendors</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Maintain Vendors</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <select id="category">
+      <option>Catering</</option>
+      <option>Florist</option>
+      <option>Decoration</option>
+      <option>Lighting</option>
+    </select>
+    <button class="btn" onclick="(function(){
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const pwd=document.getElementById('password').value.trim();
+      const category=document.getElementById('category').value;
+      if(!name||!email||!pwd){ alert('All fields required'); return; }
+      users.push({id:generateId(),name,email,password:pwd,role:'vendor',category}); saveAll(); loadVendors();
+    })()">Add Vendor</button>
+  </div>
+  <div class="card">
+    <h3>Existing Vendors</h3>
+    <table id="vendorTable"></table>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+  <script>
+    function loadVendors(){
+      const tbl=document.getElementById('vendorTable'); tbl.innerHTML='';
+      (users||[]).filter(u=>u.role==='vendor').forEach(u=>{ tbl.innerHTML += `<tr><td>${u.name}</td><td>${u.email}</td><td>${u.category||''}</td></tr>`; });
+    }
+    loadVendors();
+  </script>
+
+</div>
+</body>
+</html>

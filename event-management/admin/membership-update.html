@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Update Membership</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/membership.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Update Membership</h2>
+    <select id="membershipId"></select>
+    <select id="updatePlan">
+      <option>Extend 6 Months</option>
+      <option>Extend 1 Year</option>
+      <option>Cancel</option>
+    </select>
+    <button class="btn" onclick="updateMembership('membershipId','updatePlan')">Update</button>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+  <script>loadMembershipsList('membershipId');</script>
+
+</div>
+</body>
+</html>

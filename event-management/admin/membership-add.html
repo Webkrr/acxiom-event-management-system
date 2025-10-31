@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add Membership</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/membership.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Add Membership</h2>
+    <select id="vendorId"></select>
+    <select id="plan">
+      <option>6 Months</option>
+      <option>1 Year</option>
+      <option>2 Years</option>
+    </select>
+    <button class="btn" onclick="addMembership('vendorId','plan')">Add</button>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+  <script>loadVendorsSelect('vendorId');</script>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Signup</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/auth.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Admin Signup</h2>
+    <input id="name" type="text" placeholder="Name">
+    <input id="email" type="email" placeholder="Email">
+    <input id="password" type="password" placeholder="Password">
+    <button class="btn" onclick="adminSignup('name','email','password')">Sign Up</button>
+    <a href="login.html">Already have an account? Login</a>
+  </div>
+
+</div>
+</body>
+</html>

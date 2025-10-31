@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Request Item</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/products.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Request Item</h2>
+    <input id="reqName" placeholder="Item Name">
+    <button class="btn" onclick="addRequest('reqName','reqList')">Add Request</button>
+  </div>
+  <div class="card">
+    <h3>Requests</h3>
+    <div id="reqList"></div>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+  <script>loadRequests('reqList');</script>
+
+</div>
+</body>
+</html>

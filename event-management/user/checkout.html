@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <script src="../js/theme.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/orders.js"></script>
+</head>
+<body>
+<button class="btn theme-toggle" onclick="toggleTheme()">🌓 Theme</button>
+<div class="container">
+
+  <div class="card">
+    <h2>Checkout</h2>
+    <input id="name" placeholder="Name">
+    <input id="email" placeholder="Email">
+    <input id="addr" placeholder="Address">
+    <input id="city" placeholder="City">
+    <input id="state" placeholder="State">
+    <input id="pin" placeholder="Pin Code">
+    <select id="pay"><option>Cash</option><option>UPI</option></select>
+    <button class="btn" onclick="placeOrder('name','email','addr','city','state','pin','pay')">Order Now</button>
+  </div>
+  <a class="btn" href="dashboard.html">Back</a>
+
+</div>
+</body>
+</html>
